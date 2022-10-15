@@ -1,0 +1,36 @@
+
+<template>
+    <lightning-card title="Search Truck Bookings">
+    <div class="slds-p-around_large">
+        <lightning-input placeholder="Enter Truck Booking name" onkeyup={handleInputTruckBooking}></lightning-input>
+    </div>
+    <template if:true={isShow}>
+        <div style="width: 100%;">
+            <div style="width: 43%; float: left;">
+            <lightning-datatable
+                key-field="id"
+                data={bookings}
+                columns={columns}
+                hide-checkbox-column="true">
+            </lightning-datatable>
+            </div>
+            <div style="width: 14%; float: left;">
+                <lightning-datatable
+                key-field="id"
+                data={loads}
+                columns={loadcols}
+                hide-checkbox-column="true">
+            </lightning-datatable>
+            </div>
+            <div style="width: 43%; float: left;">
+                <lightning-datatable
+                key-field="id"
+                data={payments}
+                columns={paymentcols}
+                hide-checkbox-column="true">
+            </lightning-datatable>
+            </div>
+          </div>
+    </template>
+</lightning-card>
+</template>

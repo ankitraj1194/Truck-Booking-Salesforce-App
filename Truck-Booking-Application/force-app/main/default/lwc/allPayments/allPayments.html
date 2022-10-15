@@ -1,0 +1,14 @@
+<template>
+<lightning-card >
+    <div class="slds-m-around_medium">
+    <template if:true={payments}>
+        <lightning-datatable
+                key-field="Id"
+                data={payments}
+                columns={columns}
+                hide-checkbox-column="true">
+            </lightning-datatable>        
+    </template>
+    </div>
+</lightning-card>
+</template>

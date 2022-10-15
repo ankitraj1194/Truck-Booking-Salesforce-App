@@ -1,0 +1,17 @@
+
+<template>
+<lightning-card title="TRUCK LIST" icon-name="custom:custom31">
+<div class="slds-m-around_medium">
+<template if:true={trucks}>
+    <c-custom_image_datatype
+            key-field="Id"
+            data={trucks}
+            columns={columns}
+            hide-checkbox-column="true"
+            onrowaction={callRowaction}>
+    </c-custom_image_datatype>        
+</template>
+</div>
+</lightning-card>
+</template>
+</template>
